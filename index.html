@@ -1,0 +1,494 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Abdelrahman Mohamed Alazhary — AI Engineering student exploring AI, machine learning and software development.">
+  <title>Abdelrahman Alazhary | AI Engineering Student</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080b14;
+      --panel: #101827;
+      --text: #edf3ff;
+      --muted: #9aa9c0;
+      --cyan: #42e8e0;
+      --purple: #b36cff;
+      --line: #25334a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at 80% 5%, #18233b 0, transparent 38%), var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1080px, 92%);
+      margin: auto;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .04em;
+      font-size: 1.1rem;
+    }
+
+    .brand span {
+      color: var(--cyan);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    nav a {
+      transition: color .2s ease;
+    }
+
+    nav a:hover,
+    .contact-row a:hover {
+      color: var(--cyan);
+    }
+
+    .lang {
+      border: 1px solid var(--line);
+      background: #111a2a;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 82px 0 72px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: .82rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      line-height: 1.08;
+      margin: 14px 0;
+    }
+
+    section {
+      padding: 42px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      font-size: 1.65rem;
+      margin: 0 0 20px;
+    }
+
+    .section-title:before {
+      content: "// ";
+      color: var(--cyan);
+    }
+
+    .panel {
+      background: linear-gradient(145deg, #121d2e, #0d1421);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 7px 11px;
+      margin: 5px 5px 0 0;
+      border: 1px solid #31415a;
+      border-radius: 99px;
+      color: #dce9ff;
+      font-size: .9rem;
+      background: #121d2c;
+    }
+
+    .card {
+      min-height: 170px;
+    }
+
+    .card h3 {
+      margin: 8px 0;
+    }
+
+    .tag {
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .contact-row a {
+      color: var(--cyan);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    [dir="rtl"] body {
+      font-family: Cairo, Arial, sans-serif;
+    }
+
+    [dir="rtl"] nav {
+      font-size: .9rem;
+    }
+
+    @media(max-width:760px) {
+      .top {
+        justify-content: space-between;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px 17px;
+        padding-top: 8px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 55px 0;
+      }
+
+      .hero p {
+        margin-inline: auto;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">AB<span>.</span>ALAZHARY</div>
+
+    <nav aria-label="Main navigation">
+      <a href="#about" data-en="About" data-ar="نبذة">About</a>
+      <a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
+      <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="#journey" data-en="Journey" data-ar="رحلتي">Journey</a>
+      <a href="#education" data-en="Education" data-ar="التعليم">Education</a>
+      <a href="#certificates" data-en="Certificates" data-ar="الشهادات">Certificates</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+    </nav>
+
+    <button class="lang" id="langBtn" type="button">العربية</button>
+  </header>
+
+  <main>
+
+    <section class="hero" id="about">
+
+      <div class="eyebrow"
+        data-en="AI Engineering Student"
+        data-ar="طالب هندسة ذكاء اصطناعي">
+        AI Engineering Student
+      </div>
+
+      <h1
+        data-en="Hi, I'm Abdelrahman Mohamed Alazhary."
+        data-ar="أهلاً، أنا عبدالرحمن محمد الأزهري.">
+        Hi, I'm Abdelrahman Mohamed Alazhary.
+      </h1>
+
+      <div class="panel">
+        <p class="muted"
+          data-en="I am currently studying AI Engineering at Delta University. My goal is to grow into a capable developer in the AI field. This portfolio will evolve as I complete coursework, build projects and gain experience. I prefer to show real progress rather than claim skills or achievements I haven't earned yet."
+          data-ar="بدرس حاليًا هندسة ذكاء اصطناعي في جامعة الدلتا. هدفي أطور نفسي وأبقى مطور قوي في مجال الذكاء الاصطناعي. الموقع ده هيتطور مع إنجازي للمقررات وبناء المشاريع واكتساب الخبرة. بحب أعرض تقدمي الحقيقي بدل ما أدّعي مهارات أو إنجازات لسه محققتهاش.">
+          I am currently studying AI Engineering at Delta University. My goal is to grow into a capable developer in the AI field. This portfolio will evolve as I complete coursework, build projects and gain experience. I prefer to show real progress rather than claim skills or achievements I haven't earned yet.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title"
+        data-en="Technologies I'm learning"
+        data-ar="التقنيات اللي بتعلمها">
+        Technologies I'm learning
+      </h2>
+
+      <div class="panel">
+        <span class="chip">C#</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Python</span>
+        <span class="chip">Artificial Intelligence</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Software Development</span>
+
+        <p class="muted"
+          data-en="These represent my current learning areas, not professional proficiency ratings."
+          data-ar="دي المجالات اللي بدرسها حاليًا، مش تقييم لمستوى احترافي.">
+          These represent my current learning areas, not professional proficiency ratings.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title"
+        data-en="My projects"
+        data-ar="مشاريعي">
+        My projects
+      </h2>
+
+      <div class="grid">
+        <article class="panel card">
+          <div class="tag">COMING SOON</div>
+          <h3 data-en="First project" data-ar="أول مشروع">
+            First project
+          </h3>
+          <p class="muted"
+            data-en="My projects will appear here as I build and publish them."
+            data-ar="مشاريعي هتظهر هنا أول ما أبدأ أنفذها وأنشرها.">
+            My projects will appear here as I build and publish them.
+          </p>
+        </article>
+
+        <article class="panel card">
+          <div class="tag">IN PROGRESS</div>
+          <h3 data-en="Learning by building" data-ar="التعلم بالتطبيق">
+            Learning by building
+          </h3>
+          <p class="muted"
+            data-en="I am preparing practical projects to demonstrate what I learn."
+            data-ar="بجهز مشاريع عملية أوضح بيها الحاجات اللي بتعلمها.">
+            I am preparing practical projects to demonstrate what I learn.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="journey">
+      <h2 class="section-title"
+        data-en="My learning journey"
+        data-ar="رحلتي في التعلم">
+        My learning journey
+      </h2>
+
+      <div class="grid">
+
+        <article class="panel card">
+          <div class="tag">01 / FOUNDATION</div>
+          <h3 data-en="Programming fundamentals"
+            data-ar="أساسيات البرمجة">
+            Programming fundamentals
+          </h3>
+          <p class="muted"
+            data-en="Strengthening problem-solving and core programming concepts."
+            data-ar="تقوية مهارات حل المشكلات وفهم مفاهيم البرمجة الأساسية.">
+            Strengthening problem-solving and core programming concepts.
+          </p>
+        </article>
+
+        <article class="panel card">
+          <div class="tag">02 / EXPLORATION</div>
+          <h3 data-en="AI & Machine Learning"
+            data-ar="الذكاء الاصطناعي وتعلم الآلة">
+            AI & Machine Learning
+          </h3>
+          <p class="muted"
+            data-en="Building the mathematical and technical foundations for AI."
+            data-ar="بناء الأساس الرياضي والتقني اللازم لمجال الذكاء الاصطناعي.">
+            Building the mathematical and technical foundations for AI.
+          </p>
+        </article>
+
+        <article class="panel card">
+          <div class="tag">03 / NEXT STEP</div>
+          <h3 data-en="Practical projects"
+            data-ar="مشاريع عملية">
+            Practical projects
+          </h3>
+          <p class="muted"
+            data-en="Adding real projects here as I complete and publish them."
+            data-ar="هضيف هنا مشاريعي الحقيقية أول ما أخلصها وأنشرها.">
+            Adding real projects here as I complete and publish them.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title"
+        data-en="Education"
+        data-ar="التعليم">
+        Education
+      </h2>
+
+      <div class="panel">
+        <div class="tag">CURRENT STUDIES</div>
+        <h3 data-en="Delta University"
+          data-ar="جامعة الدلتا">
+          Delta University
+        </h3>
+        <p class="muted"
+          data-en="Artificial Intelligence College — AI Engineering student."
+          data-ar="كلية الذكاء الاصطناعي — طالب هندسة ذكاء اصطناعي.">
+          Artificial Intelligence College — AI Engineering student.
+        </p>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2 class="section-title"
+        data-en="Certificates & Courses"
+        data-ar="الشهادات والكورسات">
+        Certificates & Courses
+      </h2>
+
+      <div class="panel">
+        <div class="tag">COMING SOON</div>
+        <h3 data-en="Learning and development"
+          data-ar="التعلم والتطوير">
+          Learning and development
+        </h3>
+        <p class="muted"
+          data-en="Certificates and completed courses will be added here when available."
+          data-ar="هضيف هنا الشهادات والكورسات اللي هخلصها وأحصل عليها.">
+          Certificates and completed courses will be added here when available.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title"
+        data-en="Let's connect"
+        data-ar="خلينا نتواصل">
+        Let's connect
+      </h2>
+
+      <div class="panel contact-row">
+
+        <a href="mailto:abdelrahmanmohamedalazhary@gmail.com">
+          abdelrahmanmohamedalazhary@gmail.com
+        </a>
+
+        <a href="https://www.linkedin.com/in/abdelrahman-mohamed-alazhary-92a328252/"
+          target="_blank" rel="noopener">
+          LinkedIn ↗
+        </a>
+
+        <a href="https://github.com/abdelrhmanmohamedalazhary-byte"
+          target="_blank" rel="noopener">
+          GitHub ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Abdelrahman Mohamed Alazhary ·
+    <span
+      data-en="Built with curiosity and consistency."
+      data-ar="اتعمل بشغف واستمرار في التعلم.">
+      Built with curiosity and consistency.
+    </span>
+  </footer>
+
+</div>
+
+<script>
+  const btn = document.getElementById('langBtn');
+  let lang = 'en';
+
+  btn.addEventListener('click', () => {
+    lang = lang === 'en' ? 'ar' : 'en';
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+
+    btn.textContent = lang === 'en' ? 'العربية' : 'English';
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
